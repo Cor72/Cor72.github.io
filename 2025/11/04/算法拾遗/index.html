@@ -43,7 +43,7 @@
 <meta property="og:description" content="力扣实现库函数 - strstr()使用12345678910111213141516#include &lt;stdio.h&gt;#include &lt;string.h&gt;  int main()&#123;   const char haystack[20] &#x3D; &quot;RUNOOB&quot;;   const char needle[10] &#x3D; &quot;NOOB&amp;quot">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-11-04T05:54:20.665Z">
-<meta property="article:modified_time" content="2025-11-08T11:16:07.120Z">
+<meta property="article:modified_time" content="2025-11-13T00:49:35.252Z">
 <meta property="article:author" content="Winston Lancelot">
 <meta name="twitter:card" content="summary">
   
@@ -241,7 +241,7 @@
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
   
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9B%E6%89%A3"><span class="toc-number">1.</span> <span class="toc-text">力扣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%BA%93%E5%87%BD%E6%95%B0-strstr"><span class="toc-number">1.1.</span> <span class="toc-text">实现库函数 - strstr()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8next%E6%95%B0%E7%BB%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用next数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B4%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">字符串与整数之间的相互转化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stoi-%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">stoi() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stol-%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">stol() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stoll-%E5%87%BD%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">stoll() 函数</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9B%E6%89%A3"><span class="toc-number">1.</span> <span class="toc-text">力扣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%BA%93%E5%87%BD%E6%95%B0-strstr"><span class="toc-number">1.1.</span> <span class="toc-text">实现库函数 - strstr()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8next%E6%95%B0%E7%BB%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用next数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B4%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">字符串与整数之间的相互转化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stoi-%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">stoi() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stol-%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">stol() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stoll-%E5%87%BD%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">stoll() 函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%80%BC%E7%9A%84%E4%B8%8B%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text">返回最大最小值的下标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#min-element"><span class="toc-number">3.1.</span> <span class="toc-text">min_element</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E7%9A%84%E5%80%BC"><span class="toc-number">3.2.</span> <span class="toc-text">返回的值</span></a></li></ol></li></ol>
   
 </div>
 </div>
@@ -348,7 +348,7 @@
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
     <time datetime="2025-11-04T05:54:20.665Z" itemprop="datePublished">2025-11-04</time>
-    <time style="display: none;" id="post-update-time">2025-11-08</time>
+    <time style="display: none;" id="post-update-time">2025-11-13</time>
   </span>
   
 </div>
@@ -378,6 +378,36 @@
 
 <h3 id="stol-函数"><a href="#stol-函数" class="headerlink" title="stol() 函数"></a>stol() 函数</h3><p>功能：将字符串str转成 long 整数<br>参数：<br>str：字符串<br>pos：存储将字符串str转成 long 整数，处理了 str 中字符的个数的地址，默认为 NULL<br>base：进制，10：十进制，8：八进制，16：十六进制，0：则自动检测数值进制，str 是 0 开头为八进制，str 是 0x 或 0X 开头是十六进制，默认为十进制</p>
 <h3 id="stoll-函数"><a href="#stoll-函数" class="headerlink" title="stoll() 函数"></a>stoll() 函数</h3><p>功能：将字符串str转成 long long 整数<br>参数：<br>str：字符串<br>pos：存储将字符串 str 转成 long long 整数，处理了 str 中字符的个数的地址，默认为 NULL<br>base：进制，10：十进制，8：八进制，16：十六进制，0：则自动检测数值进制，str 是 0 开头为八进制，str 是 0x 或 0X 开头是十六进制，默认为十进制</p>
+<h2 id="返回最大最小值的下标"><a href="#返回最大最小值的下标" class="headerlink" title="返回最大最小值的下标"></a>返回最大最小值的下标</h2><h3 id="min-element"><a href="#min-element" class="headerlink" title="min_element"></a>min_element</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> minPos = <span class="built_in">min_element</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>()) - a.<span class="built_in">begin</span>();</span><br><span class="line"><span class="type">int</span> maxPos = <span class="built_in">max_element</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>()) - a.<span class="built_in">begin</span>();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">8</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> it = <span class="built_in">min_element</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="返回的值"><a href="#返回的值" class="headerlink" title="返回的值"></a>返回的值</h3><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>类型</th>
+<th align="center">值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>it</code></td>
+<td><code>vector&lt;int&gt;::iterator</code></td>
+<td align="center">指向元素 <code>1</code> 的迭代器</td>
+</tr>
+<tr>
+<td><code>*it</code></td>
+<td><code>int</code></td>
+<td align="center"><code>1</code>（最小值）</td>
+</tr>
+<tr>
+<td><code>it - v.begin()</code></td>
+<td><code>size_t</code></td>
+<td align="center"><code>3</code>（最小值下标）</td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -403,7 +433,7 @@
       
         
         
-          <img data-src="/covers/124662710_p0.jpg" data-sizes="auto" alt="C++中那些神奇的库函数" class="lazyload">
+          <img data-src="/covers/136146423_p0.jpg" data-sizes="auto" alt="C++中那些神奇的库函数" class="lazyload">
         
       
       <a href="/2025/10/29/C++%E4%B8%AD%E9%82%A3%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%9A%84%E5%BA%93%E5%87%BD%E6%95%B0/" aria-label="Next: C++中那些神奇的库函数"  title="Next: C++中那些神奇的库函数"></a>
@@ -456,7 +486,7 @@
     
       <div>
         <span class="icon-brush"></span>
-        2.4k
+        2.5k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:16
@@ -492,7 +522,7 @@
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
   
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9B%E6%89%A3"><span class="toc-number">1.</span> <span class="toc-text">力扣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%BA%93%E5%87%BD%E6%95%B0-strstr"><span class="toc-number">1.1.</span> <span class="toc-text">实现库函数 - strstr()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8next%E6%95%B0%E7%BB%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用next数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B4%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">字符串与整数之间的相互转化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stoi-%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">stoi() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stol-%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">stol() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stoll-%E5%87%BD%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">stoll() 函数</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9B%E6%89%A3"><span class="toc-number">1.</span> <span class="toc-text">力扣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%BA%93%E5%87%BD%E6%95%B0-strstr"><span class="toc-number">1.1.</span> <span class="toc-text">实现库函数 - strstr()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8next%E6%95%B0%E7%BB%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">使用next数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B4%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">字符串与整数之间的相互转化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#stoi-%E5%87%BD%E6%95%B0"><span class="toc-number">2.1.</span> <span class="toc-text">stoi() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stol-%E5%87%BD%E6%95%B0"><span class="toc-number">2.2.</span> <span class="toc-text">stol() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stoll-%E5%87%BD%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">stoll() 函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%80%BC%E7%9A%84%E4%B8%8B%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text">返回最大最小值的下标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#min-element"><span class="toc-number">3.1.</span> <span class="toc-text">min_element</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E7%9A%84%E5%80%BC"><span class="toc-number">3.2.</span> <span class="toc-text">返回的值</span></a></li></ol></li></ol>
   
 </div>
 </div>
@@ -666,7 +696,7 @@
           description: "",
           stripContent: "力扣实现库函数 - strstr()使用12345678910111213141516#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;string.h&amp;gt;  int main()&amp;#123;   const char haystack[20] = &amp;quot;RUNOOB&amp;quot;;   const char needle[10] = &amp;quot;NOOB&amp;quot;;   char *ret;    ret = strstr(haystack, needle);",
           date: "Tue Nov 04 2025 13:54:20 GMT+0800",
-          updated: "Sat Nov 08 2025 19:16:07 GMT+0800",
+          updated: "Thu Nov 13 2025 08:49:35 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
