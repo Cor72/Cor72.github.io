@@ -35,15 +35,15 @@
 
   
   
-    <meta name="description" content="安装工具12sudo apt install open-vm-toolssudo apt install open-vm-tools-desktop  配置ssh连接1234sudo apt install openssh-serversudo apt install net-toolsifconfig">
+    <meta name="description" content="安装工具12sudo apt install open-vm-toolssudo apt install open-vm-tools-desktop  配置ssh连接123sudo apt install openssh-serversudo apt install net-toolsifconfig  设置root权限12sudo passwd rootsu root  用于快速登入root账户">
 <meta property="og:type" content="article">
 <meta property="og:title" content="备案：拿到一个Liunx系统后的基本流程">
 <meta property="og:url" content="http://example.com/2025/12/04/%E5%A4%87%E6%A1%88%EF%BC%9A%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AALiunx%E7%B3%BB%E7%BB%9F%E5%90%8E%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/index.html">
 <meta property="og:site_name" content="A cup of Tea">
-<meta property="og:description" content="安装工具12sudo apt install open-vm-toolssudo apt install open-vm-tools-desktop  配置ssh连接1234sudo apt install openssh-serversudo apt install net-toolsifconfig">
+<meta property="og:description" content="安装工具12sudo apt install open-vm-toolssudo apt install open-vm-tools-desktop  配置ssh连接123sudo apt install openssh-serversudo apt install net-toolsifconfig  设置root权限12sudo passwd rootsu root  用于快速登入root账户">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-12-04T12:26:42.505Z">
-<meta property="article:modified_time" content="2025-12-04T12:38:59.289Z">
+<meta property="article:modified_time" content="2025-12-05T01:40:22.163Z">
 <meta property="article:author" content="Winston Lancelot">
 <meta name="twitter:card" content="summary">
   
@@ -241,7 +241,7 @@
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
   
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEssh%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">配置ssh连接</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEssh%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">配置ssh连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEroot%E6%9D%83%E9%99%90"><span class="toc-number">3.</span> <span class="toc-text">设置root权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E5%BF%AB%E9%80%9F%E7%99%BB%E5%85%A5root%E8%B4%A6%E6%88%B7"><span class="toc-number">4.</span> <span class="toc-text">用于快速登入root账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E8%AE%BE%E7%BD%AE%E5%BF%AB%E9%80%9F%E7%99%BB%E5%85%A5root%E8%B4%A6%E6%88%B7"><span class="toc-number">5.</span> <span class="toc-text">ssh设置快速登入root账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">6.</span> <span class="toc-text">常用操作</span></a></li></ol>
   
 </div>
 </div>
@@ -348,7 +348,7 @@
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
     <time datetime="2025-12-04T12:26:42.505Z" itemprop="datePublished">2025-12-04</time>
-    <time style="display: none;" id="post-update-time">2025-12-04</time>
+    <time style="display: none;" id="post-update-time">2025-12-05</time>
   </span>
   
 </div>
@@ -365,7 +365,17 @@
       
         <h2 id="安装工具"><a href="#安装工具" class="headerlink" title="安装工具"></a>安装工具</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install open-vm-tools</span><br><span class="line">sudo apt install open-vm-tools-desktop</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置ssh连接"><a href="#配置ssh连接" class="headerlink" title="配置ssh连接"></a>配置ssh连接</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br><span class="line">sudo apt install net-tools</span><br><span class="line">ifconfig</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="配置ssh连接"><a href="#配置ssh连接" class="headerlink" title="配置ssh连接"></a>配置ssh连接</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br><span class="line">sudo apt install net-tools</span><br><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置root权限"><a href="#设置root权限" class="headerlink" title="设置root权限"></a>设置root权限</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line">su root</span><br></pre></td></tr></table></figure>
+
+<h2 id="用于快速登入root账户"><a href="#用于快速登入root账户" class="headerlink" title="用于快速登入root账户"></a>用于快速登入root账户</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install vim</span><br><span class="line">sudo vim /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf</span><br><span class="line">i</span><br><span class="line">enter</span><br><span class="line">greeter-show-manual-login=true</span><br><span class="line">esc</span><br><span class="line">:wq</span><br><span class="line">sudo vim /etc/pam.d/gdm-autologin</span><br><span class="line">我们按一下 i 键，进入编辑模式（进入编辑模式以后下方会出现 插入 两个字）</span><br><span class="line">找到 auth required pam_succeed_if.so user != root quiet_success 这一行，注释掉（在这一行前面加上 # 就行了）</span><br><span class="line">注释掉以后，按 esc键（就是键盘左上角的），然后输入 :wq ，最后回车。</span><br><span class="line">sudo vim /etc/pam.d/gdm-password</span><br><span class="line">我们按一下 i 键，进入编辑模式（进入编辑模式以后下方会出现 插入 两个字）</span><br><span class="line">还是找到 auth required pam_succeed_if.so user != root quiet_success 这一行，注释掉（在这一行前面加上 # 就行了）</span><br><span class="line">注释掉以后，按 esc键（就是键盘左上角的），然后输入 :wq ，最后回车。</span><br><span class="line">sudo vim /root/.profile</span><br><span class="line">我们按一下 i 键，进入编辑模式（进入编辑模式以后下方会出现 插入 两个字）</span><br><span class="line">找到类似 mesg n 2&gt; /dev/null || true 这一行，注释掉（在这一行前面加上 # 就行了）</span><br><span class="line">注释掉以后，按 esc键（就是键盘左上角的），然后输入 :wq ，最后回车。</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h2 id="ssh设置快速登入root账户"><a href="#ssh设置快速登入root账户" class="headerlink" title="ssh设置快速登入root账户"></a>ssh设置快速登入root账户</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br><span class="line">我们按一下 i 键，进入编辑模式（进入编辑模式以后下方会出现 插入 两个字）</span><br><span class="line">然后 回车 ，把下面的配置复制进去：</span><br><span class="line">PermitRootLogin yes</span><br><span class="line">（可以复制到最后，也可以复制到图中的位置）</span><br><span class="line">sudo systemctl restart ssh</span><br><span class="line">finalshell改为用root登录</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+Art+T 打开终端</span><br><span class="line">ls</span><br><span class="line">mkdir+文件夹名</span><br><span class="line">cd+文件夹名，就会进入这个文件夹</span><br><span class="line">source指令用于执行一个文本文件里的一连串指令</span><br><span class="line">.bashrc,这个文件在主文件夹中，但它是一个隐藏文件，一般是看不到的，那怎样才能看到它呢，在终端中输入ls -a,该指令是显示所有文件（包括隐藏文件）</span><br></pre></td></tr></table></figure>
+
+
 
 
       
@@ -392,7 +402,7 @@
       
         
         
-          <img data-src="/covers/124662710_p0.jpg" data-sizes="auto" alt="算法拾遗" class="lazyload">
+          <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="算法拾遗" class="lazyload">
         
       
       <a href="/2025/11/04/%E7%AE%97%E6%B3%95%E6%8B%BE%E9%81%97/" aria-label="Next: 算法拾遗"  title="Next: 算法拾遗"></a>
@@ -445,10 +455,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        3.5k
+        4k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:21
+        00:23
       </div>
     
     
@@ -481,7 +491,7 @@
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
   
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEssh%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">配置ssh连接</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEssh%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">配置ssh连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEroot%E6%9D%83%E9%99%90"><span class="toc-number">3.</span> <span class="toc-text">设置root权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E4%BA%8E%E5%BF%AB%E9%80%9F%E7%99%BB%E5%85%A5root%E8%B4%A6%E6%88%B7"><span class="toc-number">4.</span> <span class="toc-text">用于快速登入root账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E8%AE%BE%E7%BD%AE%E5%BF%AB%E9%80%9F%E7%99%BB%E5%85%A5root%E8%B4%A6%E6%88%B7"><span class="toc-number">5.</span> <span class="toc-text">ssh设置快速登入root账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">6.</span> <span class="toc-text">常用操作</span></a></li></ol>
   
 </div>
 </div>
@@ -653,9 +663,9 @@
           url: "http://example.com/2025/12/04/%E5%A4%87%E6%A1%88%EF%BC%9A%E6%8B%BF%E5%88%B0%E4%B8%80%E4%B8%AALiunx%E7%B3%BB%E7%BB%9F%E5%90%8E%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/",
           excerpt: "",
           description: "",
-          stripContent: "安装工具12sudo apt install open-vm-toolssudo apt install open-vm-tools-desktop  配置ssh连接1234sudo apt install openssh-serversudo apt install net-toolsifconfig  ",
+          stripContent: "安装工具12sudo apt install open-vm-toolssudo apt install open-vm-tools-desktop  配置ssh连接123sudo apt install openssh-serversudo apt install net-toolsifconfig  设置root权限12sudo passwd rootsu root  用于快速登入root账户1234567891011121314151617181920sudo apt install vi",
           date: "Thu Dec 04 2025 20:26:42 GMT+0800",
-          updated: "Thu Dec 04 2025 20:38:59 GMT+0800",
+          updated: "Fri Dec 05 2025 09:40:22 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
